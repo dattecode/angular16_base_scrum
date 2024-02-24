@@ -1,0 +1,14 @@
+<ng-container *ngIf="!loading">
+  <article>
+    <h2>{{ product?.title}}</h2>
+    <img src="{{product?.image}}">
+    <p *ngIf="product?.description">
+      Detalle del producto: {{ product?.description }}
+    </p>
+    <p>Price: {{ product?.price | currency }}</p>
+  </article>
+</ng-container>
+
+<ng-container *ngIf="loading">
+  <i style="color:chocolate">Loading The Product</i>
+</ng-container>
